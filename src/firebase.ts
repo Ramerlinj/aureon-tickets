@@ -3,13 +3,13 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCHebcC5r_5fkgroUSTLAAR4NMcURKVFt4",
-  authDomain: "aureon-tickets.firebaseapp.com",
-  projectId: "aureon-tickets",
-  storageBucket: "aureon-tickets.firebasestorage.app",
-  messagingSenderId: "882881962216",
-  appId: "1:882881962216:web:92ec813a3d322d7cdaa95d",
-  measurementId: "G-VR16T8GNT7"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 export const app = initializeApp(firebaseConfig);
